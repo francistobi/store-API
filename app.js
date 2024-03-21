@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const connectDB = require("./db/connect");
 const url = process.env.MONGO_URL;
-const productRouter = require("./routes/products")
+const productRouter = require("./routes/products");
 
 const notFoundMiddleware = require("./middleware/not-found");
 const errorMiddleware = require("./middleware/error-handler");
