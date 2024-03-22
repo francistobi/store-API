@@ -17,16 +17,18 @@ const productSchema = new mongoose.Schema({
     type: Number,
     default: 4.5,
   },
-  createdAt : {
-    type : Date, 
-    default : Date.now()
+  createdAt: {
+    type: Date,
+    default: Date.now(),
   },
-  company : {
-    type : String, 
+  company: {
+    type: String,
     enum: {
-        value : ["ikea", "liddy", "caressa", "marcon"],
-        message : `{VALUE} is not supported`
-    }
+      values: ["ikea", "liddy", "caressa", "marcos"],
+      message: `{VALUE} is not supported`,
+    },
     // enum: ["ikea", "liddy", "caressa", "marcon"]
-  }
+  },
 });
+
+module.exports = mongoose.model("product", productSchema);

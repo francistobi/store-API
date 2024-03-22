@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send(`<h1>store api</h1> <a href="/api/v1/products">product route</a>`);
-});
+})
 
 //routes
 app.use("/api/v1/products", productRouter);
